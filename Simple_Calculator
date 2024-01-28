@@ -1,0 +1,54 @@
+/*
+    * description: this is a simple calculator made using C language 
+    * author: Jai Keshav Sharma
+    * 28/01/2024
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+    char sign;
+    double a, b;
+
+    while (1)
+    {
+        printf("Enter the operand : (+, -, *, /)\nEnter 'x' to exit\n");
+        scanf("%c", &sign);
+
+        if (sign == 'x')
+        {
+            exit(0);
+        }
+
+        printf("enter the first and second operand respectively\n");
+        scanf("%lf %lf", &a, &b);
+
+        
+
+        switch (sign)
+        {
+        case '+':
+            printf("%.1lf + %.1lf = %.1lf\n", a, b, a + b);
+            break;
+
+         case '-':
+            printf("%.1lf - %.1lf = %.1lf\n", a, b, a - b);
+            break;
+
+             case '*':
+            printf("%.1lf * %.1lf = %.1lf\n", a, b, a * b);
+            break;
+
+             case '/':
+            printf("%.1lf / %.1lf = %.1lf\n", a, b, a / b);
+            break;
+        default:
+           printf("Please enter a valid operand\n");
+        }
+
+        printf("\n");
+    }
+
+    return 0;
+}
