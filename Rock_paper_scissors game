@@ -1,0 +1,95 @@
+//this a famous game knowns as ROCK, PAPER and SCISSORS
+//author: Jai Keshav Sharma
+//28/01/2024
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int game(char you, char computer)
+{
+    if (you == computer)
+    {
+        return -1;
+    }
+
+    if (you == 'r' && computer == 'p')
+    {
+        return 0;
+    }
+    else if (you == 'p' && computer == 'r')
+    {
+        return 1;
+    }
+    if (you == 'r' && computer == 's')
+    {
+        return 1;
+    }
+    else if (you == 's' && computer == 'r')
+    {
+        return 0;
+    }
+    if (you == 'r' && computer == 's')
+    {
+        return 1;
+    }
+    if (you == 'p' && computer == 's')
+    {
+        return 0;
+    }
+    else if (you == 's' && computer == 'p')
+    {
+        return 1;
+    }
+}
+
+int main()
+{
+    int n, result;
+    char you, computer;
+    srand(time(NULL));
+
+    n = rand() % 100;
+    
+    if (n < 33)
+    {
+        computer = 'r';
+    }
+    else if (n < 66 && n > 33)
+    {
+        computer = 'p';
+    }
+    else
+    {
+        computer = 's';
+    }
+
+    printf("\n\n\t\t\t\tWelcome to the Rock, Paper and Scissors game\n\t\t\t\t");
+    printf("\n\n\t\t\tEnter 'r' for 'rock', 'p' for 'paper' and 's' for 'scissors\n\n\t\t\t\t");
+
+    scanf("%c", &you);
+
+    result = game(computer, you);
+
+    if (result == -1)
+    {
+        printf("\n\t\t\t\t\t\t\tGame DRAW!\n");
+    }
+    else if (result == 1)
+    {
+        printf("\n\t\t\t\t\t  WOW!, You hav won the game.\n");
+    }
+    else{
+        printf("\n\t\t\t\t\tOh!, you have lost the game.\n");
+    }
+
+    printf("\n\t\t\t\t\tyou chose: %c and computer chose: %c \n",you, computer);
+    
+
+
+
+    
+    
+
+    return 0;
+}
