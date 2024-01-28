@@ -1,6 +1,7 @@
-//this a famous game knowns as ROCK, PAPER and SCISSORS
-//author: Jai Keshav Sharma
-//28/01/2024
+/* *author: Jai Keshav Sharma
+   *description: this is the C code for ROCK PAPER & SCISSORS game in which user plays against the computer
+   *28/01/2024
+*/
 
 #include <stdio.h>
 #include <stdlib.h>
